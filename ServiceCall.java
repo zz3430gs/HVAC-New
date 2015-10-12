@@ -13,6 +13,18 @@ public class ServiceCall {
     protected Date resolvedDate;
 
     protected final static double UNRESOLVED = -1  ;  //Flag to indicate this hasn't been resolved so we don't have a fee yet
+    
+    protected String resolution;
+    protected double fee;
+
+    public ServiceCall(String serviceAddress, String problemDescription, Date date) {
+        this.serviceAddress = serviceAddress;
+        this.problemDescription = problemDescription;
+        this.reportedDate = date;
+        this.fee = UNRESOLVED;
+    }
+
+
     public Date getResolvedDate() {
         return resolvedDate;
     }
@@ -28,18 +40,6 @@ public class ServiceCall {
     public void setReportedDate(Date reportedDate) {
         this.reportedDate = reportedDate;
     }
-
-    protected String resolution;
-    protected double fee;
-
-    public ServiceCall(String serviceAddress, String problemDescription, Date date) {
-        this.serviceAddress = serviceAddress;
-        this.problemDescription = problemDescription;
-        this.reportedDate = date;
-        this.fee = UNRESOLVED;
-    }
-
-
 
     public String getServiceAddress() {
         return serviceAddress;
