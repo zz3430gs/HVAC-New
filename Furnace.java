@@ -13,22 +13,9 @@ public class Furnace extends ServiceCall {
 
     private static FurnaceTypeManager furnaceTypeManager;
 
-//    protected enum FurnaceTypes {
-//        FORCED_AIR(1),   //forced air heating
-//        BOILER(2),   //For radiators
-//        OCTOPUS(3);  //Old furnaces
-//
-//        private int value;
-//        private FurnaceTypes(int value) { this.value = value; }
-//    };
-
     public Furnace(String serviceAddress, String problemDescription, Date date, int furnaceType) {
 
         super(serviceAddress, problemDescription, date);
-
-//        if (furnaceTypeManager == null) {
-//            furnaceTypeManager = new FurnaceTypeManager();
-//        }
 
         //TODO Error checking - is this a valid furnace type?
         this.furnaceType = furnaceType;
