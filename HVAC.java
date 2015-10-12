@@ -220,7 +220,6 @@ public class HVAC {
                 }
             } catch (NumberFormatException ime) {
                 System.out.println("Please type a positive number");
-                // String dumpRestOfInput = scanner.nextLine();  //Force scanner to throw away the last (invalid) input
             }
         }
 
@@ -240,7 +239,6 @@ public class HVAC {
                 }
             } catch (NumberFormatException ime) {
                 System.out.println("Please type a positive number");
-               // String dumpRestOfInput = scanner.nextLine();  //Force scanner to throw away the last (invalid) input
             }
         }
 
