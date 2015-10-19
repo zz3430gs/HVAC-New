@@ -1,0 +1,31 @@
+Enter file contents here
+import java.util.Date;
+
+public class WaterHeater extends ServiceCall {
+
+    private static String waterHeater;
+
+    public WaterHeater(String serviceAddress, Date date, String problemDescription, double ageOfWaterHeater) {
+
+        super(serviceAddress, problemDescription, date);
+        this.waterHeater = waterHeater;
+
+    }
+
+    @Override
+    public String toString() {
+
+        String resolvedDateString = (resolvedDate == null) ? "Unresolved" : this.resolvedDate.toString();
+        String resolutionString = (this.resolution == null) ? "Unresolved" : this.resolution;
+        String feeString = (fee == UNRESOLVED) ? "Unresolved" : "$" + Double.toString(fee + 20);
+
+        return "Water Heater Service Call " + "\n" +
+                "Service Address= " + serviceAddress + "\n" +
+                "Problem Description = " + problemDescription + "\n" +
+                "Reported Date = " + reportedDate + "\n" +
+                "Resolved Date = " + resolvedDateString + "\n" +
+                "Resolution = " + resolutionString + "\n" +
+                "Fee = " + feeString;
+
+    }
+}
